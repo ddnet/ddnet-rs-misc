@@ -28,8 +28,8 @@
 					"isDefault": true
 				},
 				"args": [
-					"--bin=ddnet-playground",
-					"--package=ddnet-playground",
+					"--bin=ddnet-rs",
+					"--package=ddnet-rs",
 					"--manifest-path=${workspaceFolder}/Cargo.toml"
 				],
 				"problemMatcher": [],
@@ -58,9 +58,9 @@
 			{
 				"type": "lldb",
 				"request": "launch",
-				"name": "Debug executable 'ddnet-playground'",
+				"name": "Debug executable 'ddnet-rs'",
 				"args": [],
-				"program": "${workspaceFolder}/target/debug/ddnet-playground",
+				"program": "${workspaceFolder}/target/debug/ddnet-rs",
 				"cwd": "${workspaceFolder}",
 				"preLaunchTask": "Cargo: build client",
 				"sourceLanguages": ["rust"]
