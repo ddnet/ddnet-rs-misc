@@ -44,7 +44,7 @@
 					"isDefault": true
 				},
 				"args": [
-					"-p=server-bin",
+					"-p=server",
 					"--manifest-path=${workspaceFolder}/Cargo.toml"
 				],
 				"problemMatcher": [],
@@ -70,7 +70,7 @@
 				"request": "launch",
 				"name": "Debug executable 'ddnet-server'",
 				"args": [],
-				"program": "${workspaceFolder}/target/debug/server-bin",
+				"program": "${workspaceFolder}/target/debug/server",
 				"cwd": "${workspaceFolder}",
 				"preLaunchTask": "Cargo: build server",
 				"sourceLanguages": ["rust"]
