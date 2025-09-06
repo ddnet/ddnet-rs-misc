@@ -9,12 +9,17 @@
 		"lldb.launch.initCommands": ["target stop-hook add --one-liner \"command script import ${workspaceFolder}/other/vscode/lldbinit.py\""],
 		"editor.defaultFormatter": "rust-lang.rust-analyzer",
 		"editor.formatOnSave": true,
-		"rust-analyzer.check.command": "clippy"
+		"rust-analyzer.check.command": "clippy",
+		"[toml]": {
+			"editor.defaultFormatter": "tamasfe.even-better-toml",
+			"editor.formatOnSave": true
+		}
 	},
 	"extensions": {
 		"recommendations": [
 			"vadimcn.vscode-lldb",
-			"rust-lang.rust-analyzer"
+			"rust-lang.rust-analyzer",
+			"tamasfe.even-better-toml"
 		]
 	},
 	"tasks": {
