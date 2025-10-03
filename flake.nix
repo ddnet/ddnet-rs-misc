@@ -20,7 +20,7 @@
         };
         # this is a running release, always pin nightly
         toolchain = pkgs.rust-bin.nightly.latest.default.override {
-          extensions = [ "rust-src" ];
+          extensions = [ "rust-src" "rust-analyzer"];
         };
         rustPlatform = pkgs.makeRustPlatform {
           cargo = toolchain;
