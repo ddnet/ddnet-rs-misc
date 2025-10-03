@@ -81,6 +81,10 @@
               cargo-watch
               pre-commit
               rustPackages.clippy
+
+              lldb
+              python3
+              taplo-cli
             ];
             RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
             LD_LIBRARY_PATH =
