@@ -20,7 +20,7 @@
         };
         # this is a running release, always pin nightly
         toolchain = pkgs.rust-bin.nightly.latest.default.override {
-          extensions = [ "rust-src" ];
+          extensions = [ "rust-src" "rust-analyzer"];
         };
         rustPlatform = pkgs.makeRustPlatform {
           cargo = toolchain;
@@ -81,6 +81,10 @@
               cargo-watch
               pre-commit
               rustPackages.clippy
+
+              lldb
+              python3
+              taplo-cli
             ];
             RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
             LD_LIBRARY_PATH =
