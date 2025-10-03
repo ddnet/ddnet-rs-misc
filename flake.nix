@@ -70,7 +70,7 @@
               xorg.libXcursor
               xorg.libXi
               libz
-
+              libxkbcommon
               ffmpeg
               vulkan-loader
               wayland
@@ -83,7 +83,17 @@
               rustPackages.clippy
             ];
             RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
-            LD_LIBRARY_PATH = "${pkgs.vulkan-loader}/lib:${pkgs.libxkbcommon}/lib";
+            LD_LIBRARY_PATH =
+              lib.makeLibraryPath [
+                vulkan-loader
+                libxkbcommon
+                wayland
+                alsa-lib
+                ffmpeg
+                xorg.libX11
+                xorg.libXcursor
+                xorg.libXi
+              ];
           };
       }
     );
